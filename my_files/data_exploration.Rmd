@@ -10,12 +10,30 @@ knitr::opts_chunk$set(echo = FALSE)
 
 library(tidyverse)
 
-SDG <- rio::import(file = "../sdg_hackathon_data.csv")
+SDG_raw <- rio::import(file = "../sdg_hackathon_data.csv")
 
 ```
 
 
+```{r}
+glimpse(SDG_raw)
+```
+
+## Data Processing
+
+Let's first not care about _system_ and _hits_, only about _svg_. We then just count if a project abstract contain any SDG according to any method/system.  
+
 ```{r cars}
+SDG <- SDG_raw %>% 
+  select(-system, -hits) %>%
+  filter(!is.na(sdg)) %>%
+  distinct() %>%
+  mutate(start_month = lubridate::floor_date(start_date, "month"))
+
+  
+```
+
+```{r}
 glimpse(SDG)
 ```
 
@@ -27,9 +45,29 @@ SDG %>%
   ggplot(aes(x=sdg, y=n)) +
   geom_col() + 
   coord_flip() +
-  theme_minimal()
+  theme_minimal() +
+  ggtitle("Simple count of SDGs")
   
 ```
+
+```{r cars}
+SDG %>% 
+  count(sdg, start_month) %>%
+  ggplot(aes(x=start_month, y=n)) +
+  geom_line() + 
+  theme_minimal() +
+  facet_wrap(vars(sdg), ncol=4) +
+  ggtitle("Monthly mention of each SDG (any system)")
+  
+```
+
+## Network
+
+
+
+
+
+
 
 
 
