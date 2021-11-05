@@ -1,0 +1,35 @@
+---
+title: "Data-Exploration"
+author: "François Delavy"
+date: "11/5/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(tidyverse)
+
+SDG <- rio::import(file = "../sdg_hackathon_data.csv")
+
+```
+
+
+```{r cars}
+glimpse(SDG)
+```
+
+## quick plots
+
+```{r cars}
+SDG %>% 
+  count(sdg) %>%
+  ggplot(aes(x=sdg, y=n)) +
+  geom_col() + 
+  coord_flip() +
+  theme_minimal()
+  
+```
+
+
+
