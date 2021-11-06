@@ -293,7 +293,7 @@ dat <- edges %>% left_join(SDGs_names_and_colors, by = c("target" = "sdg")) %>%
   select(source, source_name = name, source_color = color, target, target_name, target_color, weight)
 
 
-dat %>%
+abstract <- dat %>%
   ggplot(aes(area = weight, fill = target_color, label = target)) +
   geom_treemap() + 
   facet_wrap(vars(source_name)) +
@@ -304,8 +304,49 @@ dat %>%
     legend.position = "none",
     aspect.ratio = 1,
     strip.text.x = element_text(size = 18)) 
+abstract
+
+ggsave(file="abstract_art.svg", plot=abstract, width=10, height=10)
+ggsave(file="abstract_art_larger.svg", plot=abstract, width=20, height=20)
 
 ```
+
+```{r, fig.width=4, fig.height=16, fig.align='center'}
+abstract_1 <- dat %>%
+  ggplot(aes(area = weight, fill = target_color, label = target)) +
+  geom_treemap() + 
+  facet_wrap(vars(source_name), ncol = 1) +
+  scale_fill_identity() +
+  # geom_treemap_text() +
+  theme_minimal() +
+  theme(
+    legend.position = "none",
+    aspect.ratio = 1,
+    strip.text.x = element_text(size = 6)) 
+abstract_1
+
+ggsave(file="abstract_art_vertical.svg", plot=abstract_1, width=2, height=20)
+
+```
+
+```{r, fig.width=16, fig.height=3, fig.align='center'}
+abstract_2 <- dat %>%
+  ggplot(aes(area = weight, fill = target_color, label = target)) +
+  geom_treemap() + 
+  facet_wrap(vars(source_name), ncol = 17) +
+  scale_fill_identity() +
+  # geom_treemap_text() +
+  theme_minimal() +
+  theme(
+    legend.position = "none",
+    aspect.ratio = 1,
+    strip.text.x = element_text(size = 6)) 
+abstract_2
+
+ggsave(file="abstract_art_horizontal.svg", plot=abstract_2, width=20, height=2)
+
+```
+
 
 ```{r, fig.width=12, fig.height=12, fig.align='center'}
 dat %>%
