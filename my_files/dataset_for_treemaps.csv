@@ -1,0 +1,269 @@
+source,source_name,source_color,target,target_name,target_color,weight
+SDG-01,No Poverty,#E6233C,SDG-02,No Hunger,#DEA739,55
+SDG-01,No Poverty,#E6233C,SDG-03,Good Health & Well-Being,#4CA146,217
+SDG-01,No Poverty,#E6233C,SDG-04,Quality Education,#C8202F,32
+SDG-01,No Poverty,#E6233C,SDG-05,Gender Equality,#EF412D,48
+SDG-01,No Poverty,#E6233C,SDG-06,Clean Water and Sanitation,#27BFE5,30
+SDG-01,No Poverty,#E6233C,SDG-07,Affordable and Clean Energy,#FBC311,14
+SDG-01,No Poverty,#E6233C,SDG-08,Decent Work and Economic Growth,#A21B44,152
+SDG-01,No Poverty,#E6233C,SDG-09,"Industry, Innovation and Infrastructure",#F3692F,62
+SDG-01,No Poverty,#E6233C,SDG-10,Reduced Inequality,3E01483,161
+SDG-01,No Poverty,#E6233C,SDG-11,Sustainable Cities and Communities,#F89D2A,108
+SDG-01,No Poverty,#E6233C,SDG-12,Responsible Consumption and Production,#BF8D2C,32
+SDG-01,No Poverty,#E6233C,SDG-13,Climate Action,#407F46,106
+SDG-01,No Poverty,#E6233C,SDG-14,Life Below Water,#2097D4,23
+SDG-01,No Poverty,#E6233C,SDG-15,Life on Land,#5ABA47,80
+SDG-01,No Poverty,#E6233C,SDG-16,Peace and Justice Strong Institutions,#12699F,129
+SDG-01,No Poverty,#E6233C,SDG-17,Partnerships to achieve the Goal,#14496B,32
+SDG-02,No Hunger,#DEA739,SDG-01,No Poverty,#E6233C,55
+SDG-02,No Hunger,#DEA739,SDG-03,Good Health & Well-Being,#4CA146,123
+SDG-02,No Hunger,#DEA739,SDG-04,Quality Education,#C8202F,7
+SDG-02,No Hunger,#DEA739,SDG-05,Gender Equality,#EF412D,7
+SDG-02,No Hunger,#DEA739,SDG-06,Clean Water and Sanitation,#27BFE5,49
+SDG-02,No Hunger,#DEA739,SDG-07,Affordable and Clean Energy,#FBC311,33
+SDG-02,No Hunger,#DEA739,SDG-08,Decent Work and Economic Growth,#A21B44,97
+SDG-02,No Hunger,#DEA739,SDG-09,"Industry, Innovation and Infrastructure",#F3692F,40
+SDG-02,No Hunger,#DEA739,SDG-10,Reduced Inequality,3E01483,40
+SDG-02,No Hunger,#DEA739,SDG-11,Sustainable Cities and Communities,#F89D2A,76
+SDG-02,No Hunger,#DEA739,SDG-12,Responsible Consumption and Production,#BF8D2C,79
+SDG-02,No Hunger,#DEA739,SDG-13,Climate Action,#407F46,156
+SDG-02,No Hunger,#DEA739,SDG-14,Life Below Water,#2097D4,20
+SDG-02,No Hunger,#DEA739,SDG-15,Life on Land,#5ABA47,178
+SDG-02,No Hunger,#DEA739,SDG-16,Peace and Justice Strong Institutions,#12699F,30
+SDG-02,No Hunger,#DEA739,SDG-17,Partnerships to achieve the Goal,#14496B,15
+SDG-03,Good Health & Well-Being,#4CA146,SDG-01,No Poverty,#E6233C,217
+SDG-03,Good Health & Well-Being,#4CA146,SDG-02,No Hunger,#DEA739,123
+SDG-03,Good Health & Well-Being,#4CA146,SDG-04,Quality Education,#C8202F,61
+SDG-03,Good Health & Well-Being,#4CA146,SDG-05,Gender Equality,#EF412D,66
+SDG-03,Good Health & Well-Being,#4CA146,SDG-06,Clean Water and Sanitation,#27BFE5,70
+SDG-03,Good Health & Well-Being,#4CA146,SDG-07,Affordable and Clean Energy,#FBC311,70
+SDG-03,Good Health & Well-Being,#4CA146,SDG-08,Decent Work and Economic Growth,#A21B44,140
+SDG-03,Good Health & Well-Being,#4CA146,SDG-09,"Industry, Innovation and Infrastructure",#F3692F,128
+SDG-03,Good Health & Well-Being,#4CA146,SDG-10,Reduced Inequality,3E01483,204
+SDG-03,Good Health & Well-Being,#4CA146,SDG-11,Sustainable Cities and Communities,#F89D2A,171
+SDG-03,Good Health & Well-Being,#4CA146,SDG-12,Responsible Consumption and Production,#BF8D2C,108
+SDG-03,Good Health & Well-Being,#4CA146,SDG-13,Climate Action,#407F46,242
+SDG-03,Good Health & Well-Being,#4CA146,SDG-14,Life Below Water,#2097D4,45
+SDG-03,Good Health & Well-Being,#4CA146,SDG-15,Life on Land,#5ABA47,120
+SDG-03,Good Health & Well-Being,#4CA146,SDG-16,Peace and Justice Strong Institutions,#12699F,283
+SDG-03,Good Health & Well-Being,#4CA146,SDG-17,Partnerships to achieve the Goal,#14496B,31
+SDG-04,Quality Education,#C8202F,SDG-01,No Poverty,#E6233C,32
+SDG-04,Quality Education,#C8202F,SDG-02,No Hunger,#DEA739,7
+SDG-04,Quality Education,#C8202F,SDG-03,Good Health & Well-Being,#4CA146,61
+SDG-04,Quality Education,#C8202F,SDG-05,Gender Equality,#EF412D,43
+SDG-04,Quality Education,#C8202F,SDG-06,Clean Water and Sanitation,#27BFE5,2
+SDG-04,Quality Education,#C8202F,SDG-07,Affordable and Clean Energy,#FBC311,2
+SDG-04,Quality Education,#C8202F,SDG-08,Decent Work and Economic Growth,#A21B44,52
+SDG-04,Quality Education,#C8202F,SDG-09,"Industry, Innovation and Infrastructure",#F3692F,22
+SDG-04,Quality Education,#C8202F,SDG-10,Reduced Inequality,3E01483,142
+SDG-04,Quality Education,#C8202F,SDG-11,Sustainable Cities and Communities,#F89D2A,30
+SDG-04,Quality Education,#C8202F,SDG-12,Responsible Consumption and Production,#BF8D2C,11
+SDG-04,Quality Education,#C8202F,SDG-13,Climate Action,#407F46,19
+SDG-04,Quality Education,#C8202F,SDG-14,Life Below Water,#2097D4,2
+SDG-04,Quality Education,#C8202F,SDG-15,Life on Land,#5ABA47,8
+SDG-04,Quality Education,#C8202F,SDG-16,Peace and Justice Strong Institutions,#12699F,129
+SDG-04,Quality Education,#C8202F,SDG-17,Partnerships to achieve the Goal,#14496B,7
+SDG-05,Gender Equality,#EF412D,SDG-01,No Poverty,#E6233C,48
+SDG-05,Gender Equality,#EF412D,SDG-02,No Hunger,#DEA739,7
+SDG-05,Gender Equality,#EF412D,SDG-03,Good Health & Well-Being,#4CA146,66
+SDG-05,Gender Equality,#EF412D,SDG-04,Quality Education,#C8202F,43
+SDG-05,Gender Equality,#EF412D,SDG-08,Decent Work and Economic Growth,#A21B44,76
+SDG-05,Gender Equality,#EF412D,SDG-09,"Industry, Innovation and Infrastructure",#F3692F,13
+SDG-05,Gender Equality,#EF412D,SDG-10,Reduced Inequality,3E01483,173
+SDG-05,Gender Equality,#EF412D,SDG-11,Sustainable Cities and Communities,#F89D2A,18
+SDG-05,Gender Equality,#EF412D,SDG-12,Responsible Consumption and Production,#BF8D2C,5
+SDG-05,Gender Equality,#EF412D,SDG-13,Climate Action,#407F46,6
+SDG-05,Gender Equality,#EF412D,SDG-14,Life Below Water,#2097D4,1
+SDG-05,Gender Equality,#EF412D,SDG-15,Life on Land,#5ABA47,3
+SDG-05,Gender Equality,#EF412D,SDG-16,Peace and Justice Strong Institutions,#12699F,218
+SDG-05,Gender Equality,#EF412D,SDG-17,Partnerships to achieve the Goal,#14496B,6
+SDG-06,Clean Water and Sanitation,#27BFE5,SDG-01,No Poverty,#E6233C,30
+SDG-06,Clean Water and Sanitation,#27BFE5,SDG-02,No Hunger,#DEA739,49
+SDG-06,Clean Water and Sanitation,#27BFE5,SDG-03,Good Health & Well-Being,#4CA146,70
+SDG-06,Clean Water and Sanitation,#27BFE5,SDG-04,Quality Education,#C8202F,2
+SDG-06,Clean Water and Sanitation,#27BFE5,SDG-07,Affordable and Clean Energy,#FBC311,31
+SDG-06,Clean Water and Sanitation,#27BFE5,SDG-08,Decent Work and Economic Growth,#A21B44,61
+SDG-06,Clean Water and Sanitation,#27BFE5,SDG-09,"Industry, Innovation and Infrastructure",#F3692F,41
+SDG-06,Clean Water and Sanitation,#27BFE5,SDG-10,Reduced Inequality,3E01483,11
+SDG-06,Clean Water and Sanitation,#27BFE5,SDG-11,Sustainable Cities and Communities,#F89D2A,102
+SDG-06,Clean Water and Sanitation,#27BFE5,SDG-12,Responsible Consumption and Production,#BF8D2C,100
+SDG-06,Clean Water and Sanitation,#27BFE5,SDG-13,Climate Action,#407F46,229
+SDG-06,Clean Water and Sanitation,#27BFE5,SDG-14,Life Below Water,#2097D4,62
+SDG-06,Clean Water and Sanitation,#27BFE5,SDG-15,Life on Land,#5ABA47,152
+SDG-06,Clean Water and Sanitation,#27BFE5,SDG-16,Peace and Justice Strong Institutions,#12699F,20
+SDG-06,Clean Water and Sanitation,#27BFE5,SDG-17,Partnerships to achieve the Goal,#14496B,14
+SDG-07,Affordable and Clean Energy,#FBC311,SDG-01,No Poverty,#E6233C,14
+SDG-07,Affordable and Clean Energy,#FBC311,SDG-02,No Hunger,#DEA739,33
+SDG-07,Affordable and Clean Energy,#FBC311,SDG-03,Good Health & Well-Being,#4CA146,70
+SDG-07,Affordable and Clean Energy,#FBC311,SDG-04,Quality Education,#C8202F,2
+SDG-07,Affordable and Clean Energy,#FBC311,SDG-06,Clean Water and Sanitation,#27BFE5,31
+SDG-07,Affordable and Clean Energy,#FBC311,SDG-08,Decent Work and Economic Growth,#A21B44,143
+SDG-07,Affordable and Clean Energy,#FBC311,SDG-09,"Industry, Innovation and Infrastructure",#F3692F,130
+SDG-07,Affordable and Clean Energy,#FBC311,SDG-10,Reduced Inequality,3E01483,15
+SDG-07,Affordable and Clean Energy,#FBC311,SDG-11,Sustainable Cities and Communities,#F89D2A,96
+SDG-07,Affordable and Clean Energy,#FBC311,SDG-12,Responsible Consumption and Production,#BF8D2C,116
+SDG-07,Affordable and Clean Energy,#FBC311,SDG-13,Climate Action,#407F46,209
+SDG-07,Affordable and Clean Energy,#FBC311,SDG-14,Life Below Water,#2097D4,12
+SDG-07,Affordable and Clean Energy,#FBC311,SDG-15,Life on Land,#5ABA47,50
+SDG-07,Affordable and Clean Energy,#FBC311,SDG-16,Peace and Justice Strong Institutions,#12699F,14
+SDG-07,Affordable and Clean Energy,#FBC311,SDG-17,Partnerships to achieve the Goal,#14496B,6
+SDG-08,Decent Work and Economic Growth,#A21B44,SDG-01,No Poverty,#E6233C,152
+SDG-08,Decent Work and Economic Growth,#A21B44,SDG-02,No Hunger,#DEA739,97
+SDG-08,Decent Work and Economic Growth,#A21B44,SDG-03,Good Health & Well-Being,#4CA146,140
+SDG-08,Decent Work and Economic Growth,#A21B44,SDG-04,Quality Education,#C8202F,52
+SDG-08,Decent Work and Economic Growth,#A21B44,SDG-05,Gender Equality,#EF412D,76
+SDG-08,Decent Work and Economic Growth,#A21B44,SDG-06,Clean Water and Sanitation,#27BFE5,61
+SDG-08,Decent Work and Economic Growth,#A21B44,SDG-07,Affordable and Clean Energy,#FBC311,143
+SDG-08,Decent Work and Economic Growth,#A21B44,SDG-09,"Industry, Innovation and Infrastructure",#F3692F,180
+SDG-08,Decent Work and Economic Growth,#A21B44,SDG-10,Reduced Inequality,3E01483,199
+SDG-08,Decent Work and Economic Growth,#A21B44,SDG-11,Sustainable Cities and Communities,#F89D2A,175
+SDG-08,Decent Work and Economic Growth,#A21B44,SDG-12,Responsible Consumption and Production,#BF8D2C,153
+SDG-08,Decent Work and Economic Growth,#A21B44,SDG-13,Climate Action,#407F46,341
+SDG-08,Decent Work and Economic Growth,#A21B44,SDG-14,Life Below Water,#2097D4,31
+SDG-08,Decent Work and Economic Growth,#A21B44,SDG-15,Life on Land,#5ABA47,155
+SDG-08,Decent Work and Economic Growth,#A21B44,SDG-16,Peace and Justice Strong Institutions,#12699F,169
+SDG-08,Decent Work and Economic Growth,#A21B44,SDG-17,Partnerships to achieve the Goal,#14496B,35
+SDG-09,"Industry, Innovation and Infrastructure",#F3692F,SDG-01,No Poverty,#E6233C,62
+SDG-09,"Industry, Innovation and Infrastructure",#F3692F,SDG-02,No Hunger,#DEA739,40
+SDG-09,"Industry, Innovation and Infrastructure",#F3692F,SDG-03,Good Health & Well-Being,#4CA146,128
+SDG-09,"Industry, Innovation and Infrastructure",#F3692F,SDG-04,Quality Education,#C8202F,22
+SDG-09,"Industry, Innovation and Infrastructure",#F3692F,SDG-05,Gender Equality,#EF412D,13
+SDG-09,"Industry, Innovation and Infrastructure",#F3692F,SDG-06,Clean Water and Sanitation,#27BFE5,41
+SDG-09,"Industry, Innovation and Infrastructure",#F3692F,SDG-07,Affordable and Clean Energy,#FBC311,130
+SDG-09,"Industry, Innovation and Infrastructure",#F3692F,SDG-08,Decent Work and Economic Growth,#A21B44,180
+SDG-09,"Industry, Innovation and Infrastructure",#F3692F,SDG-10,Reduced Inequality,3E01483,71
+SDG-09,"Industry, Innovation and Infrastructure",#F3692F,SDG-11,Sustainable Cities and Communities,#F89D2A,164
+SDG-09,"Industry, Innovation and Infrastructure",#F3692F,SDG-12,Responsible Consumption and Production,#BF8D2C,120
+SDG-09,"Industry, Innovation and Infrastructure",#F3692F,SDG-13,Climate Action,#407F46,167
+SDG-09,"Industry, Innovation and Infrastructure",#F3692F,SDG-14,Life Below Water,#2097D4,12
+SDG-09,"Industry, Innovation and Infrastructure",#F3692F,SDG-15,Life on Land,#5ABA47,91
+SDG-09,"Industry, Innovation and Infrastructure",#F3692F,SDG-16,Peace and Justice Strong Institutions,#12699F,66
+SDG-09,"Industry, Innovation and Infrastructure",#F3692F,SDG-17,Partnerships to achieve the Goal,#14496B,46
+SDG-10,Reduced Inequality,3E01483,SDG-01,No Poverty,#E6233C,161
+SDG-10,Reduced Inequality,3E01483,SDG-02,No Hunger,#DEA739,40
+SDG-10,Reduced Inequality,3E01483,SDG-03,Good Health & Well-Being,#4CA146,204
+SDG-10,Reduced Inequality,3E01483,SDG-04,Quality Education,#C8202F,142
+SDG-10,Reduced Inequality,3E01483,SDG-05,Gender Equality,#EF412D,173
+SDG-10,Reduced Inequality,3E01483,SDG-06,Clean Water and Sanitation,#27BFE5,11
+SDG-10,Reduced Inequality,3E01483,SDG-07,Affordable and Clean Energy,#FBC311,15
+SDG-10,Reduced Inequality,3E01483,SDG-08,Decent Work and Economic Growth,#A21B44,199
+SDG-10,Reduced Inequality,3E01483,SDG-09,"Industry, Innovation and Infrastructure",#F3692F,71
+SDG-10,Reduced Inequality,3E01483,SDG-11,Sustainable Cities and Communities,#F89D2A,150
+SDG-10,Reduced Inequality,3E01483,SDG-12,Responsible Consumption and Production,#BF8D2C,38
+SDG-10,Reduced Inequality,3E01483,SDG-13,Climate Action,#407F46,60
+SDG-10,Reduced Inequality,3E01483,SDG-14,Life Below Water,#2097D4,10
+SDG-10,Reduced Inequality,3E01483,SDG-15,Life on Land,#5ABA47,47
+SDG-10,Reduced Inequality,3E01483,SDG-16,Peace and Justice Strong Institutions,#12699F,473
+SDG-10,Reduced Inequality,3E01483,SDG-17,Partnerships to achieve the Goal,#14496B,22
+SDG-11,Sustainable Cities and Communities,#F89D2A,SDG-01,No Poverty,#E6233C,108
+SDG-11,Sustainable Cities and Communities,#F89D2A,SDG-02,No Hunger,#DEA739,76
+SDG-11,Sustainable Cities and Communities,#F89D2A,SDG-03,Good Health & Well-Being,#4CA146,171
+SDG-11,Sustainable Cities and Communities,#F89D2A,SDG-04,Quality Education,#C8202F,30
+SDG-11,Sustainable Cities and Communities,#F89D2A,SDG-05,Gender Equality,#EF412D,18
+SDG-11,Sustainable Cities and Communities,#F89D2A,SDG-06,Clean Water and Sanitation,#27BFE5,102
+SDG-11,Sustainable Cities and Communities,#F89D2A,SDG-07,Affordable and Clean Energy,#FBC311,96
+SDG-11,Sustainable Cities and Communities,#F89D2A,SDG-08,Decent Work and Economic Growth,#A21B44,175
+SDG-11,Sustainable Cities and Communities,#F89D2A,SDG-09,"Industry, Innovation and Infrastructure",#F3692F,164
+SDG-11,Sustainable Cities and Communities,#F89D2A,SDG-10,Reduced Inequality,3E01483,150
+SDG-11,Sustainable Cities and Communities,#F89D2A,SDG-12,Responsible Consumption and Production,#BF8D2C,145
+SDG-11,Sustainable Cities and Communities,#F89D2A,SDG-13,Climate Action,#407F46,444
+SDG-11,Sustainable Cities and Communities,#F89D2A,SDG-14,Life Below Water,#2097D4,74
+SDG-11,Sustainable Cities and Communities,#F89D2A,SDG-15,Life on Land,#5ABA47,264
+SDG-11,Sustainable Cities and Communities,#F89D2A,SDG-16,Peace and Justice Strong Institutions,#12699F,171
+SDG-11,Sustainable Cities and Communities,#F89D2A,SDG-17,Partnerships to achieve the Goal,#14496B,35
+SDG-12,Responsible Consumption and Production,#BF8D2C,SDG-01,No Poverty,#E6233C,32
+SDG-12,Responsible Consumption and Production,#BF8D2C,SDG-02,No Hunger,#DEA739,79
+SDG-12,Responsible Consumption and Production,#BF8D2C,SDG-03,Good Health & Well-Being,#4CA146,108
+SDG-12,Responsible Consumption and Production,#BF8D2C,SDG-04,Quality Education,#C8202F,11
+SDG-12,Responsible Consumption and Production,#BF8D2C,SDG-05,Gender Equality,#EF412D,5
+SDG-12,Responsible Consumption and Production,#BF8D2C,SDG-06,Clean Water and Sanitation,#27BFE5,100
+SDG-12,Responsible Consumption and Production,#BF8D2C,SDG-07,Affordable and Clean Energy,#FBC311,116
+SDG-12,Responsible Consumption and Production,#BF8D2C,SDG-08,Decent Work and Economic Growth,#A21B44,153
+SDG-12,Responsible Consumption and Production,#BF8D2C,SDG-09,"Industry, Innovation and Infrastructure",#F3692F,120
+SDG-12,Responsible Consumption and Production,#BF8D2C,SDG-10,Reduced Inequality,3E01483,38
+SDG-12,Responsible Consumption and Production,#BF8D2C,SDG-11,Sustainable Cities and Communities,#F89D2A,145
+SDG-12,Responsible Consumption and Production,#BF8D2C,SDG-13,Climate Action,#407F46,198
+SDG-12,Responsible Consumption and Production,#BF8D2C,SDG-14,Life Below Water,#2097D4,39
+SDG-12,Responsible Consumption and Production,#BF8D2C,SDG-15,Life on Land,#5ABA47,114
+SDG-12,Responsible Consumption and Production,#BF8D2C,SDG-16,Peace and Justice Strong Institutions,#12699F,41
+SDG-12,Responsible Consumption and Production,#BF8D2C,SDG-17,Partnerships to achieve the Goal,#14496B,28
+SDG-13,Climate Action,#407F46,SDG-01,No Poverty,#E6233C,106
+SDG-13,Climate Action,#407F46,SDG-02,No Hunger,#DEA739,156
+SDG-13,Climate Action,#407F46,SDG-03,Good Health & Well-Being,#4CA146,242
+SDG-13,Climate Action,#407F46,SDG-04,Quality Education,#C8202F,19
+SDG-13,Climate Action,#407F46,SDG-05,Gender Equality,#EF412D,6
+SDG-13,Climate Action,#407F46,SDG-06,Clean Water and Sanitation,#27BFE5,229
+SDG-13,Climate Action,#407F46,SDG-07,Affordable and Clean Energy,#FBC311,209
+SDG-13,Climate Action,#407F46,SDG-08,Decent Work and Economic Growth,#A21B44,341
+SDG-13,Climate Action,#407F46,SDG-09,"Industry, Innovation and Infrastructure",#F3692F,167
+SDG-13,Climate Action,#407F46,SDG-10,Reduced Inequality,3E01483,60
+SDG-13,Climate Action,#407F46,SDG-11,Sustainable Cities and Communities,#F89D2A,444
+SDG-13,Climate Action,#407F46,SDG-12,Responsible Consumption and Production,#BF8D2C,198
+SDG-13,Climate Action,#407F46,SDG-14,Life Below Water,#2097D4,212
+SDG-13,Climate Action,#407F46,SDG-15,Life on Land,#5ABA47,600
+SDG-13,Climate Action,#407F46,SDG-16,Peace and Justice Strong Institutions,#12699F,78
+SDG-13,Climate Action,#407F46,SDG-17,Partnerships to achieve the Goal,#14496B,50
+SDG-14,Life Below Water,#2097D4,SDG-01,No Poverty,#E6233C,23
+SDG-14,Life Below Water,#2097D4,SDG-02,No Hunger,#DEA739,20
+SDG-14,Life Below Water,#2097D4,SDG-03,Good Health & Well-Being,#4CA146,45
+SDG-14,Life Below Water,#2097D4,SDG-04,Quality Education,#C8202F,2
+SDG-14,Life Below Water,#2097D4,SDG-05,Gender Equality,#EF412D,1
+SDG-14,Life Below Water,#2097D4,SDG-06,Clean Water and Sanitation,#27BFE5,62
+SDG-14,Life Below Water,#2097D4,SDG-07,Affordable and Clean Energy,#FBC311,12
+SDG-14,Life Below Water,#2097D4,SDG-08,Decent Work and Economic Growth,#A21B44,31
+SDG-14,Life Below Water,#2097D4,SDG-09,"Industry, Innovation and Infrastructure",#F3692F,12
+SDG-14,Life Below Water,#2097D4,SDG-10,Reduced Inequality,3E01483,10
+SDG-14,Life Below Water,#2097D4,SDG-11,Sustainable Cities and Communities,#F89D2A,74
+SDG-14,Life Below Water,#2097D4,SDG-12,Responsible Consumption and Production,#BF8D2C,39
+SDG-14,Life Below Water,#2097D4,SDG-13,Climate Action,#407F46,212
+SDG-14,Life Below Water,#2097D4,SDG-15,Life on Land,#5ABA47,132
+SDG-14,Life Below Water,#2097D4,SDG-16,Peace and Justice Strong Institutions,#12699F,11
+SDG-14,Life Below Water,#2097D4,SDG-17,Partnerships to achieve the Goal,#14496B,5
+SDG-15,Life on Land,#5ABA47,SDG-01,No Poverty,#E6233C,80
+SDG-15,Life on Land,#5ABA47,SDG-02,No Hunger,#DEA739,178
+SDG-15,Life on Land,#5ABA47,SDG-03,Good Health & Well-Being,#4CA146,120
+SDG-15,Life on Land,#5ABA47,SDG-04,Quality Education,#C8202F,8
+SDG-15,Life on Land,#5ABA47,SDG-05,Gender Equality,#EF412D,3
+SDG-15,Life on Land,#5ABA47,SDG-06,Clean Water and Sanitation,#27BFE5,152
+SDG-15,Life on Land,#5ABA47,SDG-07,Affordable and Clean Energy,#FBC311,50
+SDG-15,Life on Land,#5ABA47,SDG-08,Decent Work and Economic Growth,#A21B44,155
+SDG-15,Life on Land,#5ABA47,SDG-09,"Industry, Innovation and Infrastructure",#F3692F,91
+SDG-15,Life on Land,#5ABA47,SDG-10,Reduced Inequality,3E01483,47
+SDG-15,Life on Land,#5ABA47,SDG-11,Sustainable Cities and Communities,#F89D2A,264
+SDG-15,Life on Land,#5ABA47,SDG-12,Responsible Consumption and Production,#BF8D2C,114
+SDG-15,Life on Land,#5ABA47,SDG-13,Climate Action,#407F46,600
+SDG-15,Life on Land,#5ABA47,SDG-14,Life Below Water,#2097D4,132
+SDG-15,Life on Land,#5ABA47,SDG-16,Peace and Justice Strong Institutions,#12699F,64
+SDG-15,Life on Land,#5ABA47,SDG-17,Partnerships to achieve the Goal,#14496B,31
+SDG-16,Peace and Justice Strong Institutions,#12699F,SDG-01,No Poverty,#E6233C,129
+SDG-16,Peace and Justice Strong Institutions,#12699F,SDG-02,No Hunger,#DEA739,30
+SDG-16,Peace and Justice Strong Institutions,#12699F,SDG-03,Good Health & Well-Being,#4CA146,283
+SDG-16,Peace and Justice Strong Institutions,#12699F,SDG-04,Quality Education,#C8202F,129
+SDG-16,Peace and Justice Strong Institutions,#12699F,SDG-05,Gender Equality,#EF412D,218
+SDG-16,Peace and Justice Strong Institutions,#12699F,SDG-06,Clean Water and Sanitation,#27BFE5,20
+SDG-16,Peace and Justice Strong Institutions,#12699F,SDG-07,Affordable and Clean Energy,#FBC311,14
+SDG-16,Peace and Justice Strong Institutions,#12699F,SDG-08,Decent Work and Economic Growth,#A21B44,169
+SDG-16,Peace and Justice Strong Institutions,#12699F,SDG-09,"Industry, Innovation and Infrastructure",#F3692F,66
+SDG-16,Peace and Justice Strong Institutions,#12699F,SDG-10,Reduced Inequality,3E01483,473
+SDG-16,Peace and Justice Strong Institutions,#12699F,SDG-11,Sustainable Cities and Communities,#F89D2A,171
+SDG-16,Peace and Justice Strong Institutions,#12699F,SDG-12,Responsible Consumption and Production,#BF8D2C,41
+SDG-16,Peace and Justice Strong Institutions,#12699F,SDG-13,Climate Action,#407F46,78
+SDG-16,Peace and Justice Strong Institutions,#12699F,SDG-14,Life Below Water,#2097D4,11
+SDG-16,Peace and Justice Strong Institutions,#12699F,SDG-15,Life on Land,#5ABA47,64
+SDG-16,Peace and Justice Strong Institutions,#12699F,SDG-17,Partnerships to achieve the Goal,#14496B,33
+SDG-17,Partnerships to achieve the Goal,#14496B,SDG-01,No Poverty,#E6233C,32
+SDG-17,Partnerships to achieve the Goal,#14496B,SDG-02,No Hunger,#DEA739,15
+SDG-17,Partnerships to achieve the Goal,#14496B,SDG-03,Good Health & Well-Being,#4CA146,31
+SDG-17,Partnerships to achieve the Goal,#14496B,SDG-04,Quality Education,#C8202F,7
+SDG-17,Partnerships to achieve the Goal,#14496B,SDG-05,Gender Equality,#EF412D,6
+SDG-17,Partnerships to achieve the Goal,#14496B,SDG-06,Clean Water and Sanitation,#27BFE5,14
+SDG-17,Partnerships to achieve the Goal,#14496B,SDG-07,Affordable and Clean Energy,#FBC311,6
+SDG-17,Partnerships to achieve the Goal,#14496B,SDG-08,Decent Work and Economic Growth,#A21B44,35
+SDG-17,Partnerships to achieve the Goal,#14496B,SDG-09,"Industry, Innovation and Infrastructure",#F3692F,46
+SDG-17,Partnerships to achieve the Goal,#14496B,SDG-10,Reduced Inequality,3E01483,22
+SDG-17,Partnerships to achieve the Goal,#14496B,SDG-11,Sustainable Cities and Communities,#F89D2A,35
+SDG-17,Partnerships to achieve the Goal,#14496B,SDG-12,Responsible Consumption and Production,#BF8D2C,28
+SDG-17,Partnerships to achieve the Goal,#14496B,SDG-13,Climate Action,#407F46,50
+SDG-17,Partnerships to achieve the Goal,#14496B,SDG-14,Life Below Water,#2097D4,5
+SDG-17,Partnerships to achieve the Goal,#14496B,SDG-15,Life on Land,#5ABA47,31
+SDG-17,Partnerships to achieve the Goal,#14496B,SDG-16,Peace and Justice Strong Institutions,#12699F,33

@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, message=FALSE)
 
 library(tidyverse)
 
@@ -17,14 +17,18 @@ SDG_raw <- rio::import(file = "../sdg_hackathon_data.csv")
 
 ```{r}
 glimpse(SDG_raw)
+SDG_raw %>% count(system)
 ```
 
 ## Data Processing
 
 Let's first not care about _system_ and _hits_, only about _svg_. We then just count if a project abstract contain any SDG according to any method/system.  
 
-```{r cars}
+We remove the "ontology" and "sdsn" systems as they are too sensitive and blurry the picture.  
+
+```{r }
 SDG <- SDG_raw %>% 
+  filter(system != "ontology", system != "sdsn") %>%
   select(-system, -hits) %>%
   filter(!is.na(sdg)) %>%
   distinct() %>%
@@ -39,7 +43,7 @@ glimpse(SDG)
 
 ## quick plots
 
-```{r cars}
+```{r}
 SDG %>% 
   count(sdg) %>%
   ggplot(aes(x=sdg, y=n)) +
@@ -50,7 +54,7 @@ SDG %>%
   
 ```
 
-```{r cars}
+```{r}
 SDG %>% 
   count(sdg, start_month) %>%
   ggplot(aes(x=start_month, y=n)) +
@@ -63,6 +67,264 @@ SDG %>%
 
 ## Network
 
+1. SDGs mentioned together
+2. Universities working on same themes - network of universities
+
+### 1. SDGs mentioned together
+
+Counting the SDGs that we mentioned in the same abstract.  
+
+```{r, fig.width=16, fig.height=10}
+
+library(ggraph)
+library(tidygraph)
+
+# nodes list:
+nodes <- SDG %>% count(sdg, name = "weight")
+
+# edges list:
+edges <- SDG %>%
+  # only what we need:
+  select(project_number, sdg) %>%
+  group_by(project_number) %>%
+  mutate(target = paste(sdg, collapse = ';')) %>%
+  # we do not need to continue working on the grouped dataframe:
+  ungroup() %>%
+  # then we create a new row for all the combinations observed in the data,
+  # by splitting the column added above:
+  separate_rows(target, sep = ';') %>%
+  select(source = sdg, target = target) %>%
+  # we remove references to self:
+  filter(source != target) %>%
+  group_by(source, target) %>%
+  summarize(weight = n())
+glimpse(edges)
+
+graph <- as_tbl_graph(edges, directed = FALSE, vertices = nodes) 
+# create the layout for the graph:
+set.seed(100)
+# lay <- ggraph::create_layout(graph, layout = "dh") %>%
+#   left_join(nodes, by = c("name" = "sdg"))
+
+net <- ggraph(graph, layout = "stress") +
+  geom_edge_link(aes(width = edges$weight), color = "grey", alpha = 0.2) +
+  geom_node_point(aes(color = nodes$sdg, size=nodes$weight), shape = 19, alpha = 0.8) +
+  geom_node_text(aes(label = nodes$sdg), repel = TRUE, size = 5) +
+  scale_edge_width_continuous(range = c(1, 10), name = "co-Mentions") + # control size
+  # scale_edge_colour_continuous(
+  #   low = "#ffffff",
+  #   # low = "#d3d3d3",
+  #   high = "#000000",
+  #   space = "Lab",
+  #   na.value = "grey50",
+  #   guide = NULL
+  # ) +
+  scale_size_continuous(name = "Number of Mentions", range = c(3, 24)) +
+  # scale_color_manual(name = "Category", values = HL_colors, 
+  #                    labels = c("Languages", "Platforms", "Web Frameworks", 
+  #                               "Other Frameworks"))+
+  coord_fixed()+
+  theme_graph() +
+  theme(legend.position = "bottom", 
+        legend.text = element_text(size = 15),
+        legend.title = element_text(size = 17)
+        # legend.key = element_rect(size = 5)
+        ) #+ 
+  # guides(colour = guide_legend(override.aes = list(size=8)))
+
+net
+
+
+```
+
+```{r, fig.width=16, fig.height=10, include=FALSE}
+net <- ggraph(graph, layout = 'kk') +
+  geom_edge_link(aes(width = edges$weight), color = "grey", alpha = 0.2) +
+  geom_node_point(aes(color = nodes$sdg, size=nodes$weight), shape = 19, alpha = 0.8) +
+  geom_node_text(aes(label = nodes$sdg), repel = TRUE, size = 5) +
+  scale_edge_width_continuous(range = c(1, 10), name = "co-Mentions") + # control size
+  # scale_edge_colour_continuous(
+  #   low = "#ffffff",
+  #   # low = "#d3d3d3",
+  #   high = "#000000",
+  #   space = "Lab",
+  #   na.value = "grey50",
+  #   guide = NULL
+  # ) +
+  scale_size_continuous(name = "Number of Mentions", range = c(3, 24)) +
+  # scale_color_manual(name = "Category", values = HL_colors, 
+  #                    labels = c("Languages", "Platforms", "Web Frameworks", 
+  #                               "Other Frameworks"))+
+  coord_fixed()+
+  theme_graph() +
+  theme(legend.position = "bottom", 
+        legend.text = element_text(size = 15),
+        legend.title = element_text(size = 17)
+        # legend.key = element_rect(size = 5)
+        ) #+ 
+  # guides(colour = guide_legend(override.aes = list(size=8)))
+
+net
+```
+
+
+```{r, fig.width=16, fig.height=10, include=FALSE}
+net <- ggraph(graph, layout = 'dh') +
+  geom_edge_link(aes(width = edges$weight), color = "grey", alpha = 0.2) +
+  geom_node_point(aes(color = nodes$sdg, size=nodes$weight), shape = 19, alpha = 0.8) +
+  geom_node_text(aes(label = nodes$sdg), repel = TRUE, size = 5) +
+  scale_edge_width_continuous(range = c(1,10), name = "co-Mentions") + # control size
+  # scale_edge_colour_continuous(
+  #   low = "#ffffff",
+  #   # low = "#d3d3d3",
+  #   high = "#000000",
+  #   space = "Lab",
+  #   na.value = "grey50",
+  #   guide = NULL
+  # ) +
+  scale_size_continuous(name = "Number of Mentions", range = c(3, 24)) +
+  # scale_color_manual(name = "Category", values = HL_colors, 
+  #                    labels = c("Languages", "Platforms", "Web Frameworks", 
+  #                               "Other Frameworks"))+
+  coord_fixed()+
+  theme_graph() +
+  theme(legend.position = "bottom", 
+        legend.text = element_text(size = 15),
+        legend.title = element_text(size = 17)
+        # legend.key = element_rect(size = 5)
+        ) #+ 
+  # guides(colour = guide_legend(override.aes = list(size=8)))
+
+net
+```
+
+```{r, fig.width=16, fig.height=10, include=FALSE}
+net <- ggraph(graph, layout = 'fr') +
+  geom_edge_link(aes(width = edges$weight), color = "grey", alpha = 0.2) +
+  geom_node_point(aes(color = nodes$sdg, size=nodes$weight), shape = 19, alpha = 0.8) +
+  geom_node_text(aes(label = nodes$sdg), repel = TRUE, size = 5) +
+  scale_edge_width_continuous(range = c(1,10), name = "co-Mentions") + # control size
+  # scale_edge_colour_continuous(
+  #   low = "#ffffff",
+  #   # low = "#d3d3d3",
+  #   high = "#000000",
+  #   space = "Lab",
+  #   na.value = "grey50",
+  #   guide = NULL
+  # ) +
+  scale_size_continuous(name = "Number of Mentions", range = c(3, 24)) +
+  # scale_color_manual(name = "Category", values = HL_colors, 
+  #                    labels = c("Languages", "Platforms", "Web Frameworks", 
+  #                               "Other Frameworks"))+
+  coord_fixed()+
+  theme_graph() +
+  theme(legend.position = "bottom", 
+        legend.text = element_text(size = 15),
+        legend.title = element_text(size = 17)
+        # legend.key = element_rect(size = 5)
+        ) #+ 
+  # guides(colour = guide_legend(override.aes = list(size=8)))
+
+net
+```
+
+```{r, fig.width=16, fig.height=10, include=FALSE}
+net <- ggraph(graph, layout = 'graphopt') +
+  geom_edge_link(aes(width = edges$weight), color = "grey", alpha = 0.2) +
+  geom_node_point(aes(color = nodes$sdg, size=nodes$weight), shape = 19, alpha = 0.8) +
+  geom_node_text(aes(label = nodes$sdg), repel = TRUE, size = 5) +
+  scale_edge_width_continuous(range = c(1,10), name = "co-Mentions") + # control size
+  # scale_edge_colour_continuous(
+  #   low = "#ffffff",
+  #   # low = "#d3d3d3",
+  #   high = "#000000",
+  #   space = "Lab",
+  #   na.value = "grey50",
+  #   guide = NULL
+  # ) +
+  scale_size_continuous(name = "Number of Mentions", range = c(3, 24)) +
+  # scale_color_manual(name = "Category", values = HL_colors, 
+  #                    labels = c("Languages", "Platforms", "Web Frameworks", 
+  #                               "Other Frameworks"))+
+  coord_fixed()+
+  theme_graph() +
+  theme(legend.position = "bottom", 
+        legend.text = element_text(size = 15),
+        legend.title = element_text(size = 17)
+        # legend.key = element_rect(size = 5)
+        ) #+ 
+  # guides(colour = guide_legend(override.aes = list(size=8)))
+
+net
+```
+
+
+### 2. Uni
+
+Let's try with a small SDG first: SDG-06
+
+--- NO TIME !!! ---
+
+
+```{r}
+
+SDG_06 <- SDG %>% filter(sdg == "SDG-06")
+
+# nodes list:
+
+
+
+```
+
+
+## Treemaps
+ 
+We use the same data (edge list) as for the networks
+
+```{r, fig.width=16, fig.height = 16, fig.align='center'}
+
+library(treemapify)
+
+SDGs_names_and_colors <- rio::import("SDGs_names_and_colors.csv")
+
+dat <- edges %>% left_join(SDGs_names_and_colors, by = c("target" = "sdg")) %>%
+  select(source, target, target_name = name, target_color = color, weight) %>%
+  left_join(SDGs_names_and_colors, by = c("source" = "sdg")) %>%
+  select(source, source_name = name, source_color = color, target, target_name, target_color, weight)
+
+
+dat %>%
+  ggplot(aes(area = weight, fill = target_color, label = target)) +
+  geom_treemap() + 
+  facet_wrap(vars(source_name)) +
+  scale_fill_identity() +
+  # geom_treemap_text() +
+  theme_minimal() +
+  theme(
+    legend.position = "none",
+    aspect.ratio = 1,
+    strip.text.x = element_text(size = 18)) 
+
+```
+
+```{r, fig.width=12, fig.height=12, fig.align='center'}
+dat %>%
+  ggplot(aes(area = weight, fill = target_color, label = target)) +
+  geom_treemap() + 
+  facet_wrap(vars(source_name)) +
+  scale_fill_identity() +
+  geom_treemap_text() +
+  theme_minimal() +
+  theme(
+    legend.position = "none",
+    aspect.ratio = 1,
+    strip.text.x = element_text(size = 18)) 
+```
+
+
+```{r}
+rio::export(dat, "dataset_for_treemaps.csv")
+```
 
 
 
