@@ -26,9 +26,11 @@ Let's first not care about _system_ and _hits_, only about _svg_. We then just c
 
 We remove the "ontology" and "sdsn" systems as they are too sensitive and blurry the picture.  
 
+We pick ths sytsem Aurora, it's clearer if only one.
+
 ```{r }
 SDG <- SDG_raw %>% 
-  filter(system != "ontology", system != "sdsn") %>%
+  filter(system == "aurora") %>%
   select(-system, -hits) %>%
   filter(!is.na(sdg)) %>%
   distinct() %>%
@@ -294,20 +296,25 @@ dat <- edges %>% left_join(SDGs_names_and_colors, by = c("target" = "sdg")) %>%
 
 
 abstract <- dat %>%
-  ggplot(aes(area = weight, fill = target_color, label = target)) +
+  ggplot(aes(area = weight, fill = target_color)) +#, label = target)) +
+  facet_wrap(vars(source)) +
   geom_treemap() + 
-  facet_wrap(vars(source_name)) +
   scale_fill_identity() +
-  # geom_treemap_text() +
-  theme_minimal() +
+  # geom_treemap_text(grow=FALSE) +
   theme(
     legend.position = "none",
     aspect.ratio = 1,
-    strip.text.x = element_text(size = 18)) 
+    strip.text.x = element_text(size = 18)) +
+  theme_minimal()
+
 abstract
+
 
 ggsave(file="abstract_art.svg", plot=abstract, width=10, height=10)
 ggsave(file="abstract_art_larger.svg", plot=abstract, width=20, height=20)
+
+ggsave(file="abstract_art_labels.svg", plot=abstract, width=20, height=20)
+
 
 ```
 
